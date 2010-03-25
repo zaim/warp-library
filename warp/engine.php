@@ -808,9 +808,3 @@ $GLOBALS['_CONFIG'] = new Context();
 			return $value;
 		}
 	}
-
-/// self documentor
-
-	if (php_sapi_name() == 'cli' && !isset($_SERVER['REQUEST_URI'])) {
-
-	}
