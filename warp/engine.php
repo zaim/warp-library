@@ -7,7 +7,7 @@
 /**
  * Object: $_CONFIG
  *
- * The global $_CONFIG {@link Context} object used by some WARP functions.
+ * The global $_CONFIG <Context> object used by some WARP functions.
  */
 $GLOBALS['_CONFIG'] = new Context();
 
