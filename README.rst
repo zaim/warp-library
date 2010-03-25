@@ -17,8 +17,7 @@ build simple web applications quickly.
 Installation
 ============
 
-WARP is just one file, ``warp/engine.php``. Copy this file (with or without
-the ``warp`` directory) into your PHP include path.
+Copy the ``warp/engine.php`` into your PHP include path.
 
 Usage
 =====
@@ -44,16 +43,16 @@ function. Note that his is not the HTTP request (not $_SERVER['REQUEST_URI'])
 but an application-specific URI string passed via any of these methods:
 
 1. From the PATH_INFO value:
-   ``example.com/index.php/the/request/uri?extra=keys``
+   example.com/index.php/the/request/uri?extra=keys
 
 2. From a GET query parameter:
-   ``example.com/index.php?uri=the/request/uri&extra=keys``
+   example.com/index.php?uri=the/request/uri&extra=keys
 
 3. From the first parameter in a GET query:
-   ``example.com/index.php?the/request/uri&extra=keys``
+   example.com/index.php?the/request/uri&extra=keys
 
 4. From the whole query string:
-   ``example.com/index.phpthe/request/uri&extra=keys``
+   example.com/index.php?the/request/uri&extra=keys
 
 Example
 -------
@@ -88,7 +87,7 @@ Simple URI to functions (PHP 5.3+)::
             echo "About Us";
         },
         '404' => function($context) {
-            echo "Sorry, page not found: $uri"
+            echo "Sorry, page not found: {$context->uri}"
         }
     );
 
